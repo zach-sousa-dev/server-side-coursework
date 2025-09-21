@@ -55,7 +55,7 @@ try {
  *          "Black Wins" - red colony was destroyed
  *          "M.A.D." - both colonies were destroyed
  * 
- * @throws \InvalidArgumentException If the string is
+ * @throws InvalidArgumentException If the string is
  *                                   not set or if 
  *                                   a character does
  *                                   not match R B or
@@ -66,9 +66,9 @@ function determineVictor($ant_positions) {
 
     //  input validation
     if(!isset($ant_positions)) 
-        throw new \InvalidArgumentException('String cannot be empty.');
+        throw new InvalidArgumentException('String cannot be empty.');
     if(!preg_match($regex_pattern, $ant_positions))
-        throw new \InvalidArgumentException('String can only contain characters R, B, or X.');
+        throw new InvalidArgumentException('String can only contain characters R, B, or X.');
 
     // we don't care about the empty spaces so just get rid of them
     $ant_positions = str_replace('X', "", $ant_positions); 
