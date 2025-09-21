@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grade Calculator</title>
+        
+        <style>
+            html {
+                height: 100%;
+                width: 100%;
+                display: flex;
+            }
+
+            body {
+                margin: auto;
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: center;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+            }
+
+            #output {
+                border: 1px solid black;
+                border-radius: 5px;
+                padding: 5px;
+                margin-top: 10px;
+                min-width: 50px;
+                height: 50px;
+                line-height: 50px;
+            }
+
+            input[type=number] {
+                font-size: large;
+                height: 50px;
+                width: 500px;
+            }
+
+            button {
+                height: 50px;
+                font-size: larger;
+                margin-top: 10px;
+            }
+
+            button:hover {
+                cursor: pointer;
+            }
+        </style>
+        <script defer src="script.js"></script>
+    </head>
+    <body>
+
+
+        <h1>Grades Calculator</h1>
+        <form id="main-form">
+            <input type="number" name="number-input" id="number-input" placeholder="Enter your numeric mark to convert...">
+            <button type="submit" id="submit">Calculate Grade</button>
+        </form>
+        <div id="output">
+            Your result will appear here.
+        </div>
+
+
+    </body>
+</html>
